@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "0.8"
+install: npm install --save-dev
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq libopenobex1-dev libobexftp0-dev bluetooth libpam0g-dev libcairo2-dev libjpeg8-dev libgif-dev libavahi-compat-libdnssd-dev gnome-keyring libgnome-keyring-dev g++ libssl-dev ia32-libs
+ - npm i -g jasmine-node node-gyp
+before_script:
+ - export RUN_ANDROID_CI="yes"
+script: npm run-script travis-ci-test

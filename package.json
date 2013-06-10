@@ -13,5 +13,13 @@
   "dependencies":{
     "webinos-pzp"   : "git://github.com/webinos/webinos-pzp.git",
     "webinos-widget"   : "git://github.com/webinos/webinos-widget.git"
+  },
+  "devDependencies": {
+    "async": "0.2.6",
+    "colors": "0.6.0-1"
+  },
+  "scripts": {
+    "travis-ci-test": "node ./test/tools/android-ci/ci-tests.js 0"
   }
+
 }
